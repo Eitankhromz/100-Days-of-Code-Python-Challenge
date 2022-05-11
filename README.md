@@ -1,8 +1,14 @@
-#                                                                       100-Days-of-Code-Python-Challenge
+<h1 align="center">
+     100-Days-of-Code-Python-Challenge
+</h1>
 
-*Starting from : May 10, 2022*
+<h2 align="center">
+  I pledge to complete this 100 days of coding challenge.
+</h2>
 
-### I pledge to complete this 100 days of coding challenge.
+<p align="center">
+  Starting from : May 10, 2022
+</p>
 
 ## Content
 
