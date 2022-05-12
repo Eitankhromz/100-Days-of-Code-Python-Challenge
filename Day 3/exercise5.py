@@ -1,17 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 Exercise 4:
 # 🚨 Don't change the code below 👇
 print("Welcome to the Love Calculator!")
