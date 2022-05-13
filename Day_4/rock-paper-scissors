@@ -1,0 +1,95 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+import random
+#user input
+user_choice = int(input("What do you choos? Type 0 for Rock, 1 for Paper or 2 for Scissors. \n"))
+
+#store variables in list
+choices = [rock, paper, scissors]
+computer_choice = random.randint(0, len(choices)-1)
+
+# if computer_choice == 0:
+#   if user_choice == 1:
+#     print(f"{choices[user_choice]} \n Computer chose: \n {choices[computer_choice]} \n You win!")
+#   elif user_choice == 2:
+#     print(f"{choices[user_choice]} \n Computer chose: \n {choices[computer_choice]} \n You lose")
+# elif computer_choice == 1:
+#   if user_choice == 0:
+#     print(f"{choices[user_choice]} \n Computer chose: \n {choices[computer_choice]} \n You lose")
+#   elif user_choice == 2:
+#     print(f"{choices[user_choice]} \n Computer chose: \n {choices[computer_choice]} \n You win!")
+# elif computer_choice == 2:
+#   if user_choice == 1:
+#     print(f"{choices[user_choice]} \n Computer chose: \n {choices[computer_choice]} \n You lose")
+#   elif user_choice == 0:
+#     print(f"{choices[user_choice]} \n Computer chose: \n {choices[computer_choice]} \n You win!")
+# else:
+#     print(f"{choices[user_choice]} \n Computer chose: \n {choices[computer_choice]} \n You both draw")
+
+#OR
+
+if user_choice == 0 and computer_choice == 1:
+  print(f"{choices[user_choice]} \n Computer chose: \n {choices[computer_choice]} \n You lose")
+elif user_choice == 0 and computer_choice == 2:
+  print(f"{choices[user_choice]} \n Computer choses: \n {choices[computer_choice]} \n You win")
+elif user_choice == 1 and computer_choice == 0:
+  print(f"{choices[user_choice]} \n Computer choses: \n {choices[computer_choice]} \n You win")
+elif user_choice == 1 and computer_choice == 2:
+  print(f"{choices[user_choice]} \n Computer choses: \n {choices[computer_choice]} \n You lose")
+elif user_choice == 2 and computer_choice == 0:
+  print(f"{choices[user_choice]} \n Computer choses: \n {choices[computer_choice]} \n You lose")
+elif user_choice == 2 and computer_choice == 1:
+  print(f"{choices[user_choice]} \n Computer choses: \n {choices[computer_choice]} \n You win!")
+else:
+  print(f"{choices[user_choice]} \n Computer choses: \n {choices[computer_choice]} \n You both draw :/")
+
+#OR
+
+import random
+
+choices = [rock, paper, scissors]
+computer_choice = random.randint(0, 2)
+
+user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors. \n"))
+if user_choice > 2 or user_choice < -1:
+    print(f"You typed an ivalid number. You lose!")
+    #store variables in list
+    
+else:
+  if user_choice == 0 and computer_choice == 2:
+    print(f"You win!")
+  elif user_choice == computer_choice:
+    print(f"It is a draw")
+  elif computer_choice > user_choice:
+    print(f"You lose!")
+  elif user_choice == 2 and computer_choice == 0:
+    print(f"You lose")
+  elif user_choice > computer_choice:
+    print(f"You win!")
+  print(f"{choices[user_choice]} \n Computer chose: {choices[computer_choice]}")
