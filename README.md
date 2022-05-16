@@ -18,3 +18,4 @@
 - Day 4: [Randomization and Python Lists](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_4)
 - Day 5: [Python Loops](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_5)
 - Day 6: [Python Functions & Karel](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_6)
+- Day 7: [Hangman](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_7)
