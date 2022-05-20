@@ -1,0 +1,64 @@
+from replit import clear
+
+from art import logo
+print(logo)
+
+bids = {}
+
+def find_highest_bidder(bidding_record):
+    highest_bid = 0
+    for bidder in bidding_record:
+        if bidding_record[bidder] > highest_bid:
+            highest_bid = bidding_record[bidder]
+            winner = bidder
+    print(f"The winner is {winner} with a bid of ${highest_bid}")
+        
+
+play_auction = False
+while not play_auction:
+    name = input("What is your name? \n")
+    price = int(input("What's your bid? \n"))
+    bids[name] = price
+    more_bidders = input("Are there other bidders? Type 'yes', otherwise type 'no' \n").lower()
+    if more_bidders == "no":
+        play_auction = True
+        find_highest_bidder(bids)
+    elif more_bidders == "yes":
+        clear()
+        
+     #OR   
+        
+#from replit import clear
+
+# #Show logo from art.py
+# from art import logo
+# print(logo)
+# print("Welcome to the secret auction program.")
+
+# #Ask name and bid input
+# name = input("What is your name? \n")
+# bid = int(input("What's your bid? \n"))
+
+# #Add name and bid to dictionary
+# dict = {}
+# dict[name] = bid
+
+# #Ask if there is other players
+# play_game = True
+# while play_game:
+#     play_again = input("Is there another bidder? Type 'yes', otherwise type 'no'\n").lower()
+#     if play_again == "yes":
+#         clear()
+#         name = input("What is your name? \n")
+#         bid = int(input("What's your bid? \n $"))
+#         dict[name] = bid
+#     else:
+#         play_game = False
+
+# highest_bid = dict[name]
+# for name in dict:
+#     if highest_bid < dict[name]:
+#         highest_bid = dict[name]
+#         winner_name = name
+# print(f"The winner is {winner_name} with a bid of ${highest_bid}")
+
