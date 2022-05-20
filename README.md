@@ -20,3 +20,4 @@
 - Day 6: [Python Functions & Karel](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_6)
 - Day 7: [Hangman](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_7)
 - Day 8: [Function Parameters & Caesar Cipher](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_8)
+- Day 9: [Dictionaries, Nesting, and the Secret Auction](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_9)
