@@ -23,3 +23,4 @@
 - Day 9: [Dictionaries, Nesting, and the Secret Auction](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_9)
 - Day 10: [Functions with Outputs](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_10)
 - Day 11: [The Blackjack Capstone Project](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_11)
+- Day 12: [Scope & Number Guessing Game](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_12)
