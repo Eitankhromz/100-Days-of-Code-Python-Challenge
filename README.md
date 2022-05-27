@@ -25,3 +25,4 @@
 - Day 11: [The Blackjack Capstone Project](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_11)
 - Day 12: [Scope & Number Guessing Game](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_12)
 - Day 13: [Debugging: How to Find and Fix Errors in your Code](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_13)
+- Day 14: [Higher Lower Game Project](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_14)
