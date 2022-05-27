@@ -1,1 +1,66 @@
-#Will update
+#import necessities
+import random
+from game_data import data
+from art import logo, vs
+from replit import clear
+
+def compare_followers(ig_user_A, ig_user_B):
+  """Compares the follower count between two instagram pages"""
+  correct_answer = ""
+  if int(ig_user_A["follower_count"]) > int(ig_user_B["follower_count"]):
+    correct_answer = "a"
+  elif int(ig_user_B["follower_count"]) > int(ig_user_A["follower_count"]):
+    correct_answer = "b"
+
+  return correct_answer
+
+def switch(ig_user_A, ig_user_B):
+  """sets instagramer B as instagramer A"""
+  ig_user_A = ig_user_B
+  
+  return ig_user_A
+
+
+def game():
+  #create a score counter
+  score = 0
+
+  #generate random account
+  ig_user_A = random.choice(data)
+  name_A = ig_user_A["name"]
+  
+  play_game = False
+  while not play_game:
+    print(logo)
+
+    #keep track of score during game play
+    if score != 0:
+      print(f"You're right! Current Score: {score}.")
+
+    #generate random account B
+    ig_user_B = random.choice(data)
+    
+    print(f"Compare A: {name_A}, a {ig_user_A['description']} from {ig_user_A['country']}")
+    print(vs)
+    name_B = ig_user_B["name"]
+    print(f"Against B: {name_B}, a {ig_user_B['description']} from {ig_user_B['country']}")
+
+    #compare which account has more followers
+    correct_answer = compare_followers(ig_user_A, ig_user_B)
+
+    #Ask user to guess who has more followers
+    user_guess = input("Who has more followers? Type 'A' or 'B': ").lower()
+
+    #user's guess is checked
+    if user_guess == correct_answer:
+      score+=1
+      #Account B becomes the new Account A
+      ig_user_A = switch(ig_user_A, ig_user_B)
+      name_A = ig_user_A["name"]
+      clear()
+      play_game = False
+    else:
+      print(f"Sorry that's wrong. Final score: {score}")
+      play_game = True
+
+game()
