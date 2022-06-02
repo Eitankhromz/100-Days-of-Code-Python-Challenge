@@ -29,3 +29,4 @@
 - Day 15: [Local Development Environment Setup & the Coffee Machine](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_15)
 - Day 16: [Object Oriented Programming (OOP)](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_16)
 - Day 17: [The Quiz Project & the Benefits of OOP](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_17)
+- Day 18: [Instances, State and Higher Order Functions](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_18)
