@@ -1,1 +1,49 @@
-#In porgress
+from turtle import Turtle, Screen
+import random
+screen = Screen()
+screen.setup(width=500, height=400)
+
+turtle_names = []
+list_colors = ["red", "green", "blue", "pink", "orange", "yellow"]
+
+
+def set_turtles():
+    """creates and sets the turtles up for the race"""
+    x_cor = -230
+    y_cor = -100
+    for index in range(6):
+        tim = Turtle(shape="turtle")
+        tim.speed("fastest")
+        tim.color(list_colors[index])
+        tim.penup()
+        tim.goto(x=x_cor, y=y_cor)
+        y_cor += 30
+        turtle_names.append(tim)
+    return turtle_names
+
+
+user_choice = screen.textinput(title="Winner", prompt="Who will win the race? Enter a color:")
+
+list_of_turtles = set_turtles()
+
+
+def turtle_race():
+    """plays the turtle race game"""
+    game_on = True
+    while game_on:
+        for turtle_name in list_of_turtles:
+            if turtle_name.xcor() > 230:
+                game_on = False
+                winner = turtle_name.color()
+                win_color = winner[0]
+                if win_color == user_choice:
+                    print(f"You've won! The {win_color} turtle is the winner")
+                else:
+                    print(f"You've lost! The {win_color} turtle is the winner")
+
+            turtle_name.fd(random.randint(0, 10))
+
+    screen.bye()
+
+
+turtle_race()
