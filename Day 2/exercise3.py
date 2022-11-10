@@ -17,3 +17,14 @@ monthsLeft = round(howLong * 12)
 #print using f-string
 print(f"You have {daysLeft} days, {weeksLeft} weeks, and {monthsLeft} months left.")
 
+OR
+
+years_left = 90 -int(age)
+
+days = int(years_left) * 365
+weeks = int(years_left) * 52
+months = int(years_left) * 12
+
+print(f"You have {days} days, {weeks} weeks, and {months} months left.")
+
+
