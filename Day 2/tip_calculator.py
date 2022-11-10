@@ -27,3 +27,18 @@ final_amt = "{:.2f}".format(perPerson)
 
 #print result using f-string
 print(f"Each person should pay: ${final_amt}")
+
+OR
+
+print("Welcome to the tip calculator")
+bill_total = float(input("What was the total bill? "))
+tip_percent = float(input("What percentage tip would you like to give? 10, 12, 15? "))
+
+bill_tip = bill_total * (1 + (tip_percent/100))
+
+ppl = int(input("How many people to split the bill? "))
+
+each_pay = round(bill_tip / ppl, 2)
+each_pay = "{:.2f}".format(each_pay) #rounding to 2 decimal places
+
+print(f"Each person should pay: ${each_pay}")
