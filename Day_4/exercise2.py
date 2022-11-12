@@ -12,3 +12,11 @@ names = names_string.split(", ")
 rand_name = random.randint(0, (len(names)-1))
 
 print(f"{names[rand_name]} is going to buy the meal today!")
+
+OR
+
+lucky_index = random.randint(0, len(names)-1)
+
+lucky_individual = names[lucky_index]
+
+print(f"{lucky_individual} is going to buy the meal today! ")
