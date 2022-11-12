@@ -38,3 +38,26 @@ elif lovescore > 40 and lovescore < 50:
 else:
     print(f"Your score is {lovescore}.")
 
+OR
+
+combined = name1.lower() + name2.lower()
+t = combined.count("t")
+r = combined.count("r")
+u = combined.count("u")
+v = combined.count("v")
+o = combined.count("o")
+e = combined.count("e")
+l = combined.count("l")
+
+true_count = t + r + u + e
+love_count = l + o + v + e
+
+str_score = str(true_count) + str(love_count)
+score = int(str_score)
+
+if score < 10 or score > 90:
+    print(f"Your score is {score}, you go together like coke and mentos.")
+elif score > 40 and score < 50:
+    print(f"Your score is {score}, you are alright together.")
+else:
+    print(f"Your score is {score}")
