@@ -42,4 +42,27 @@ if direction == "left":
     print("You get attacked by a shark. Game Over!")
 else:
   print("You went the wrong way and got lost. Game Over!")
+
+OR
+
+direction = input("You are at a fork in the road. Would you like to go left to Wessex or Right to Daneland? \n").lower()
+
+if direction == "right":
+  print("You've been captured by the Danes. Game over.")
+elif direction == "left":
+  print("You have come to a frozen lake. You can cross the lake by foot or by skates")
+  skates = input("Would you like to cross by skates or by foot? \n").lower()
+  if skates == "foot":
+    print("Oh no! The ice cracked from all your weight. Game over.")
+  elif skates == "skates":
+    sword_color = input("You have crossed the lake, successfully. You have found three swords. Red, Yellow, and Blue. Only one will help you survive. \n").lower()
+    if sword_color == "red":
+      print("You have burned your hand from the heat of the sword. Game over!")
+    elif sword_color == "yellow":
+      print("The sword broke. You cannot protect yourself. Game over!")
+    elif sword_color == "blue":
+      print("Congrats! This is the correct sword. You win!")
+    else:
+      print("invalid. Game Over!")
+
   
