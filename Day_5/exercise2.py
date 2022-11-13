@@ -13,3 +13,13 @@ for each_score in student_scores:
         max = each_score 
     
 print(f"The highest score in the class is: {max}")
+
+OR
+
+max = student_scores[0]
+
+for score in student_scores:
+    if max < score:
+        max = score
+
+print(f"The highest score in the class is: {max}")
