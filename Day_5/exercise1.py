@@ -16,3 +16,14 @@ for element in student_heights:
     total_items+=1
 
 print(round(sum / total_items))
+
+OR
+
+sum_heights = 0
+count_heights = 0
+
+for height in student_heights:
+    sum_heights += height
+    count_heights += 1
+
+print(round(sum_heights/count_heights))
