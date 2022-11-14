@@ -18,3 +18,4 @@ def draw_square():
     move()
 
 draw_square()
+.
