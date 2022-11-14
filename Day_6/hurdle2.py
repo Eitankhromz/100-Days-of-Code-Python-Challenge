@@ -64,3 +64,9 @@ def hurdle():
 
 for jumps in range(6):
     hurdle()
+OR
+
+number_of_hurdles = 6
+while number_of_hurdles > 0:
+    hurdle()
+    number_of_hurdles-=1
