@@ -18,4 +18,13 @@ while not at_goal():
        turn_left()
     elif wall_on_right():
         move()
-    
+OR
+
+while not at_goal():
+    if right_is_clear():
+        turn_right()
+        move()
+    elif front_is_clear():
+        move()
+    else:
+        turn_left()
