@@ -37,3 +37,57 @@ while play_again: #create while loop that loops only when true
         break
     
 print("OK, thanks for playing!")
+
+OR
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+
+def caesar(caesar_text, shift_amt, dir): #defined a function
+  crypted_text = "" #used to store the encrypted/decrypted text
+  for char in caesar_text: #loop thru each letter
+    if char in alphabet: #check if char is in alphabet list
+      index = alphabet.index(char)
+      if dir == "encode":
+        if (index + shift) > 25: #adjust shift if index out of range
+          index = (index + shift) - 26
+          shifted_letter = alphabet[index]
+        else:
+          shifted_letter = alphabet[index + shift] #otherwise shift by shift amt
+        crypted_text += shifted_letter
+      elif dir == "decode":
+        if (index - shift) < 0: #adjust dhift if index out of range
+          index = (index - shift) + 26
+          crypted_text += alphabet[index]
+        else:
+          crypted_text += alphabet[index - shift] #otherwise shift if index out of range
+    else:
+      crypted_text += char
+
+  print(f"The {dir}d text is {crypted_text}")
+
+
+from art import logo #import art and clear
+from replit import clear
+print(logo)
+
+
+game_on = True
+
+while game_on: #while true --> continue playing until user stops
+
+  direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+  text = input("Type your message:\n").lower()
+  shift = int(input("Type the shift number:\n"))
+  
+  
+  caesar(caesar_text=text, shift_amt=shift, dir=direction)
+
+  play_again = input("Type 'yes' if you want to go again. Otherwise type 'no'\n").lower()
+  
+  
+  if play_again == "no":
+    print("Thanks for playing!")
+    game_on = False
+
+  
