@@ -62,3 +62,40 @@ while not play_auction:
 #         winner_name = name
 # print(f"The winner is {winner_name} with a bid of ${highest_bid}")
 
+OR
+
+from replit import clear
+#HINT: You can call clear() to clear the output in the console.
+from art import logo
+
+print(logo)
+
+def highest_bidder(bidding_records):
+  #list_of_bidders = [{"Angela": $50}]
+  max_bid = 0
+  for bidder in bidding_records:
+    bid_amt = int(bidding_records[bidder])
+
+    if bid_amt > max_bid:
+      max_bid = bid_amt
+      break
+
+  print(f"The winner is {bidder} with a bid of ${max_bid}")
+  
+
+each_bid = {}
+
+auction_in_process = True
+while auction_in_process:
+  name = input("What is your name?: ")
+  price = input("What is your bid?: $")
+
+  each_bid[name] = price
+
+  others = input("Are there any other bidders? Type 'yes or 'no'.").lower()
+  if others == "no":
+    auction_in_process = False
+
+  clear()
+
+highest_bidder(each_bid)
