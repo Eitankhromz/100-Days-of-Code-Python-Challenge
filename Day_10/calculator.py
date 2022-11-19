@@ -88,3 +88,91 @@ def calculator():
             print ("That is an invalid input")
 
 calculator()
+
+
+####MODIFIED
+#Calculator
+from replit import clear
+from art import logo
+
+#Add
+def add(n1, n2):
+  """Adds two numbers together"""
+  return n1 + n2
+
+#Subtract
+def subtract(n1, n2):
+  """Subtracts two numbers together"""
+  return n1 - n2
+
+#Multiply
+def multiply(n1, n2):
+  """Multiplies two numbers together"""
+  return n1 * n2
+
+#Divide
+def divide(n1, n2):
+  """divides two numbers together"""
+  return n1/n2
+
+#Square
+def square(n1, n2):
+  """squares n1"""
+  return n1**2
+
+#Raise to power
+def power(n1, n2):
+  """raises n1 to the power of n2"""
+  return n1**n2
+
+#Square root
+def sqrt(n1, n2):
+  """finds the square root of n1"""
+  return n1**0.5
+
+#Create a dictionary with keys being the symbols and the functions being the values
+operations = {
+  "+": add,
+  "-": subtract,
+  "*": multiply,
+  "/": divide,
+  "**": square,
+  "^": power,
+  "%": sqrt,
+}
+
+print(logo)
+
+def calculator():
+  calculator_on = True
+  
+  num1 = float(input("What's the first number?: "))
+  for operation in operations:
+      print(operation)
+  
+  #Create while loop that continues to calculate until user chooses no to
+  while calculator_on:
+    operation_symbol = input("Pick an operation: ") #Ask user to pick operation
+    
+    num2 = float(input("What's the next number?: ")) #Pick the second number
+    
+    function = operations[operation_symbol] #store key (i.e "*") in var called function
+    calculation = function(num1, num2) #perform function and store in calculation
+  
+    print(f"{num1} {operation_symbol} {num2} = {calculation}")
+    
+    calculate_again = input(f"Type 'y' to continue calculating with {calculation}, or type 'n' to start new calculation, otherwise type 'exit; to stop': ").lower() #ask user 
+    
+    if calculate_again == "n":
+      clear()
+      calculator()
+    elif calculate_again == "y":
+      num1 = calculation 
+    elif calculate_again == "exit":
+      calculator_on = False
+    else:
+      print("invalid input")
+      calculator_on = False
+
+calculator()
+
