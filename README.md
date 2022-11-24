@@ -7,7 +7,7 @@
 </h2>
 
 <p align="center">
-  Starting from: May 09, 2022
+  Starting from: November 10, 2022
 </p>
 
 ## Content
