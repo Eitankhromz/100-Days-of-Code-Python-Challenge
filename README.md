@@ -1,5 +1,5 @@
 <h1 align="center">
-     100-Days-of-Code-Python-Challenge
+     100 Days of Code Python Challenge
 </h1>
 
 <h2 align="center">
