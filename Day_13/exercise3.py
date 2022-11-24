@@ -1,12 +1,9 @@
 for number in range(1, 101):
-  if number % 3 == 0 and number % 5 == 0:
+  if number % 3 == 0 and number % 5 == 0: #Must be 'and' statement otherwise all 'FizzBuzz'
     print("FizzBuzz")
-    number += 1
-  elif number % 3 == 0:
+  elif number % 3 == 0: #change to elif statement (not mutually exclusive)
     print("Fizz")
-    number += 1
-  elif number % 5 == 0:
+  elif number % 5 == 0: #change to elif statement (not mutually exclusive)
     print("Buzz")
-    number += 1
   else:
-    print(number)
+    print(number) #do not need brackets (printing lists w/ only one number)
