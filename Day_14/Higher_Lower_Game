@@ -64,3 +64,140 @@ def game():
       play_game = True
 
 game()
+
+OR
+
+import random
+from art import logo, vs
+from game_data import data
+from replit import clear
+
+
+def format_data(account):
+  """Take the account data and returns the printable format"""
+  account_name = account['name']
+  account_descr = account['description']
+  account_country = account['country']
+  return (f"{account_name}, a {account_descr}, from {account_country}")
+
+
+
+def check_answer(a_followers, b_followers, guess):
+  """Use if statement to check if correct"""
+  if a_followers > b_followers:
+    return guess == 'a'
+  else:
+    return guess == 'b'
+  
+
+#Display art
+score = 0
+print(logo)
+
+#Make game repeatable
+game_on = False
+account_b = random.choice(data)
+
+while not game_on:
+  #Generate a random account from the game_data
+  #Make account at position B equal to account at position A
+  account_a = account_b
+  account_b = random.choice(data)
+  
+  if account_a == account_b:
+    account_b = random.choice(data)
+  
+  print(f"Compare A: {format_data(account_a)}")
+  print(vs)
+  print(f"Against B: {format_data(account_b)}")
+  
+  #Ask user for guess
+  guess = input("Who has more followers? Type 'A' or 'B': ").lower()
+  
+  #Check if user is correct
+  ##Get follower count of each account
+  a_follower_account = account_a["follower_count"]
+  b_follower_account = account_b["follower_count"]
+  
+  
+  #Give user feedback on their guess
+  is_correct = check_answer(a_follower_account, b_follower_account, guess)
+
+  clear()
+  print(logo)
+  
+  if is_correct:
+    print("You are right!")
+    score += 1
+  else:
+    game_on = True
+    print(f"Sorry thats wrong. Your final score: {score}")
+ 
+ OR
+ 
+ 
+ #Import logo and data
+import random
+from art import logo, vs
+from game_data import data
+from replit import clear
+
+#create a function that generates a random person
+def generate_random_dictionary():
+  """Generates random dictionary from list of data"""
+  rand_dict = random.choice(data)  
+  return rand_dict
+
+#create a function that compares who has more followers and returns that person
+def compare_followers(follower_count_A, follower_count_B):
+  """Compares two follower counts and returns the greates"""
+  if follower_count_A > follower_count_B:
+    return "A"
+  else:
+    return "B"
+
+def play_game():
+  print(logo)
+  compare_A = generate_random_dictionary()
+  
+  count = 0
+  game_on = True
+  
+  while game_on:
+    #call random person function and assign them to a list
+    compare_B = generate_random_dictionary()
+
+    if compare_A ==  compare_B:
+      compare_B = generate_random_dictionary()
+    
+    comparison_list = []
+    comparison_list.append(compare_A)
+    comparison_list.append(compare_B)
+    
+    print(f"Compare A: {comparison_list[0]['name']}, a {comparison_list[0]['description']}, from {comparison_list[0]['country']}")
+    
+    print(vs)
+    
+    print(f"Against B: {comparison_list[1]['name']}, a {comparison_list[1]['description']}, from {comparison_list[1]['country']}")
+    
+    #call this function and store in var winner
+    winner = (compare_followers(comparison_list[0]['follower_count'], comparison_list[1]['follower_count'])).lower()
+    print(winner)
+    
+    #Ask user to guess. Store guess in var called user_guess
+    user_guess = input("Who has more followers? Type 'A' or 'B': ").lower()
+    
+    if user_guess != winner:
+      game_on = False
+    elif user_guess == winner:
+      count += 1
+      compare_A = compare_B
+      clear()
+      print(logo)
+    
+  
+  print(f"Sorry thats wrong. Your final score: {count}")
+
+play_game()
+
+
