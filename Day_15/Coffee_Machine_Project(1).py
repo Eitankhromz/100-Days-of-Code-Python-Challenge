@@ -116,3 +116,72 @@ while coffee_machine_on:
                 print(make_coffee(user_coffee_choice))
 
 
+##Without Comments
+
+from menu import MENU, resources
+
+
+def report():
+    """Prints a report of all current resources"""
+    resource_list = []
+    for resource in resources:
+        resource_list.append(resource)
+
+    for index in range(len(resource_list)):
+        if index == 3:
+            print(f"{resource_list[index]}: ${resources[resource_list[index]]:.2f}")
+        else:
+            print(f"{resource_list[index]}: {resources[resource_list[index]]}")
+
+
+def sufficient_resources(coffee_choice):
+    """Checks if there are enough resources to make coffee and returns True if there is not"""
+    for ingredient in MENU[coffee_choice]["ingredients"]:
+        if resources[ingredient] < MENU[coffee_choice]["ingredients"][ingredient]:
+            print(f"Sorry there is not enough {ingredient}")
+            return True
+        else:
+            return False
+
+
+def process_coins(coffee_choice):
+    """processes all the coins and returns True if not enough. Otherwise prints change"""
+    quarters = float(input("How many quarters? "))
+    dimes = float(input("How many dimes? "))
+    nickels = float(input("How many nickels? "))
+    pennies = float(input("How many pennies? "))
+
+    total = (quarters * 0.25) + (dimes * 0.1) + (nickels * 0.05) + (pennies * 0.01)
+
+    if total < MENU[coffee_choice]["cost"]:
+        print("Sorry that's not enough money. Money refunded.")
+        return True
+    else:
+        resources["money"] += MENU[coffee_choice]['cost']
+        change = round(total - MENU[coffee_choice]['cost'], 2)
+        print(f"Here is your change: ${change:.2f}")
+
+
+def make_coffee(coffee_choice):
+    for ingredient in MENU[coffee_choice]["ingredients"]:
+        resources[ingredient] -= MENU[coffee_choice]["ingredients"][ingredient]
+        return f"Here is your {coffee_choice}. Enjoy!"
+
+
+resources["money"] = 0
+coffee_machine_on = True
+
+while coffee_machine_on:
+    user_coffee_choice = input("What would you like? (espresso/latte/cappuccino): ").lower()
+
+    if user_coffee_choice == "report":
+        report()
+    elif user_coffee_choice == "off":
+        coffee_machine_on = False
+    else:
+        if not sufficient_resources(user_coffee_choice):
+            print("Please insert coins.")
+            if not process_coins(user_coffee_choice):
+                print(make_coffee(user_coffee_choice))
+
+
