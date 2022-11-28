@@ -100,3 +100,5 @@ while machine_on:
                 print(f"Here is your {choice}. Enjoy!")
                 make_coffee(choice)
 
+
+                
