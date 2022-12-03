@@ -47,3 +47,48 @@ for _ in range(10):
 
 screen.exitonclick()
 
+#OR
+
+# import colorgram
+#
+# # Extract 6 colors from an image.
+# colors = colorgram.extract('image(1).jpg', 20)
+#
+# rgb_colors = []
+# for color in colors:
+#     r = color.rgb.r
+#     g = color.rgb.g
+#     b = color.rgb.b
+#     new_color = (r, g, b)
+#     rgb_colors.append(new_color)
+#
+# print(rgb_colors)
+import turtle
+from turtle import Turtle, Screen
+import random
+
+turtle.colormode(255)
+
+screen = Screen()
+t = Turtle()
+
+color_list = [(233, 233, 236), (233, 232, 228), (236, 230, 233), (224, 234, 229), (176, 48, 79), (42, 98, 146), (205, 161, 94), (223, 210, 102), (137, 90, 64), (177, 164, 38), (109, 176, 207), (212, 131, 173), (227, 73, 49), (201, 75, 117), (88, 105, 192), (28, 143, 89), (124, 218, 207), (120, 43, 71), (94, 158, 65), (227, 170, 187)]
+
+t.hideturtle()
+t.penup()
+y = -300
+t.speed('fastest')
+
+for _ in range(10):
+    t.setposition(-350, y)
+    for _ in range(10):
+        t.dot(20, random.choice(color_list))
+        t.fd(50)
+
+    y += 50
+
+
+
+
+screen.exitonclick()
+
