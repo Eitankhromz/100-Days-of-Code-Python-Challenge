@@ -25,6 +25,11 @@ def clear_screen():
     tim.penup()
     tim.home()
     tim.pendown()
+ 
+#OR
+
+def reset():
+    t.reset()
 
 
 
