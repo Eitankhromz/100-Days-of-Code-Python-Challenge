@@ -47,3 +47,48 @@ def turtle_race():
 
 
 turtle_race()
+
+#OR
+
+from turtle import Turtle, Screen
+import random
+
+t = Turtle()
+screen = Screen()
+
+screen.setup(width=500, height=400)
+user_bet = screen.textinput(title="Make Your Bet", prompt="Which turtle will win")
+print(user_bet)
+colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+tortugas = []
+
+race_on = False
+y_cor = -100
+for index in range(6):
+    t = Turtle(shape="turtle")
+    t.penup()
+    t.color(colors[index])
+    t.goto(x=-230, y=y_cor)
+    y_cor+= 40
+    tortugas.append(t)
+
+if user_bet:
+    race_on = True
+
+while race_on:
+    for turtle in tortugas:
+        if turtle.xcor() > 230:
+            winning_color = turtle.pencolor()
+            race_on = False
+            if winning_color == user_bet:
+                print(f"You won! The {winning_color} turtle is the winner")
+            else:
+                print(f"You lost! The {winning_color} turtle is the winner")
+        rand_dist = random.randint(0, 10)
+        turtle.fd(rand_dist)
+
+
+
+
+
+screen.exitonclick()
