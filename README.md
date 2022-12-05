@@ -31,3 +31,4 @@
 - Day 17: [The Quiz Project & the Benefits of OOP](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_17)
 - Day 18: [Turtle & the Graphical User Interface (GUI)](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_18)
 - Day 19: [Instances, State and Higher Order Functions](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_19)
+- Day 20: [Build the Snake Game Part 1: Animation & Coordinates](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_20)
