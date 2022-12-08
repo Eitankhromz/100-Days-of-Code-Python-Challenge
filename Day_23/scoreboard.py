@@ -27,5 +27,3 @@ class Score(Turtle):
         self.left_score += 1
         self.clear()
 
-
-
