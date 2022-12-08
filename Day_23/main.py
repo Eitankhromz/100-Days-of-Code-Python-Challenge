@@ -14,15 +14,14 @@ screen.setup(width=800, height=600)
 screen.title("Pong Game")
 screen.tracer(0)
 
-
 #2. Create and move a paddle
 screen.listen()
 r_paddle = Paddle(RIGHT)
 l_paddle = Paddle(LEFT)
 
 #Move right paddle
-screen.onkey(fun=r_paddle.go_up, key="Up")
-screen.onkey(fun=r_paddle.go_down, key="Down")
+screen.onkeypress(fun=r_paddle.go_up, key="Up")
+screen.onkeypress(fun=r_paddle.go_down, key="Down")
 
 #Move left paddle
 screen.onkeypress(fun=l_paddle.go_up, key="w")
@@ -61,8 +60,6 @@ while game_on:
     if ball.xcor() < -380:
         ball.reset_position()
         score.r_scored()
-
-
 
 
 screen.exitonclick()
