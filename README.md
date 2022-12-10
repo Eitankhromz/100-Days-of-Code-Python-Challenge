@@ -34,3 +34,4 @@
 - Day 20: [Build the Snake Game Part 1: Animation & Coordinates](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_20)
 - Day 21: [Build the Snake Game Part 2: Inheritance & List Slicing](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_21)
 - Day 22: [Build Pong: The Famous Arcade Game](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_22)
+- Day 23: [The Turtle Crossing Capstone Project](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_23)
