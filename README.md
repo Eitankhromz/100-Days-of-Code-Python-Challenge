@@ -36,3 +36,5 @@
 - Day 22: [Build Pong: The Famous Arcade Game](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_22)
 - Day 23: [The Turtle Crossing Capstone Project](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_23)
 - Day 24: [Files, Directories and Paths](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_24)
+- Day 25: [Working with CSV Data and the Pandas Library](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_25)
+- Day 26: [List Comprehension and the NATO Alphabet](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_26)
