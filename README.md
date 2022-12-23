@@ -39,4 +39,4 @@
 - Day 25: [Working with CSV Data and the Pandas Library](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_25)
 - Day 26: [List Comprehension and the NATO Alphabet](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_26)
 - Day 27: [Tkinter, *args, **kwargs and Creating GUI Programs](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_27)
-- Day 28: []()
+- Day 28: [Tkinter, Dynamic Typing and the Pomodoro GUI Application](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_28)
