@@ -40,4 +40,4 @@
 - Day 26: [List Comprehension and the NATO Alphabet](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_26)
 - Day 27: [Tkinter, *args, **kwargs and Creating GUI Programs](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_27)
 - Day 28: [Tkinter, Dynamic Typing and the Pomodoro GUI Application](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_28)
-- Day 29: [](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_29)
+- Day 29: [Building a Password Manager GUI App with Tkinter](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_29)
