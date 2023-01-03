@@ -1,76 +1,50 @@
-import smtplib
+##################### Extra Hard Starting Project ######################
 
-my_email = "test123.email1229@gmail.com"
-password = "PUT IN YOUR OWN"
+MY_EMAIL = "test123.email1229@gmail.com"
+MY_PASS = "dmbxozpyjkdlcxkk"
 
-# #create an object from SMTP class
-# connection = smtplib.SMTP("smtp.gmail.com", port=587)
-#
-# #secure connection
-# connection.starttls()
-#
-# #Login into from address email
-# connection.login(user=my_email, password=password)
-#
-# #Send the email
-# connection.sendmail(from_addr=my_email,
-#                     to_addrs="test123.email1229@yahoo.com",
-#                     msg="Subject:Hello\n\n This is the body of the email"
-#                     )
-
-#close the program
-# connection.close()
-
-#FASTER & BETTER WAY
-
-# # create an object from SMTP class
-# with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
-#     #secure connection
-#     connection.starttls()
-#
-#     #Login into from address email
-#     connection.login(user=my_email, password=password)
-#
-#     #Send the email
-#     connection.sendmail(from_addr=my_email,
-#                         to_addrs="test123.email1229@yahoo.com",
-#                         msg="Subject:Hello\n\n This is the body of the email"
-#                         )
-
+import pandas as pd
 import datetime as dt
+import smtplib
 import random
 
-# #module.Class.method
-# now = dt.datetime.now()
-# year = now.year
-# month = now.month
-# week_day = now.weekday()
-# print(week_day)
-#
-# date_of_birth = dt.datetime(year=2002, month=12, day=15)
-# print(date_of_birth)
+# 1. Update the birthdays.csv
 
-today = dt.datetime.now()
 
-if today.weekday() == 6:
-    with open("quotes.txt") as quotes_data:
-        quotes = quotes_data.readlines()
+# 2. Check if today matches a birthday in the birthdays.csv
+tdy = dt.datetime.now()
+tdy_month = tdy.month
+tdy_day = tdy.day
+today = (tdy_month, tdy_day)
 
-        chosen_quote = random  .choice(quotes)
 
+birthday_data = pd.read_csv("birthdays.csv")
+
+birthdays_dict = {(data_row.month, data_row.day): data_row for (index, data_row) in birthday_data.iterrows()}
+
+if today in birthdays_dict:
+    # 3. If step 2 is true, pick a random letter from letter templates and replace the [NAME] with the person's actual
+    #   name from birthdays.csv
+    bday_person = birthdays_dict[today]
+    num = random.randint(1, 3)
+    file_path = f"letter_templates/letter_{num}.txt"
+    with open(file_path, "r") as letter:
+        contents = letter.read()
+        contents = contents.replace("[NAME]", bday_person["name"])
+
+# 4. Send the letter generated in step 3 to that person's email address.
     with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
         #secure connection
         connection.starttls()
 
         #Login
-        connection.login(user=my_email, password=password)
+        connection.login(user=MY_EMAIL, password=MY_PASS)
 
         #Send Message
-        connection.sendmail(from_addr=my_email,
-                            to_addrs="test123.email1229@yahoo.com",
-                            msg=f"Subject: Apologies \n\nHi Noah, \n \nIt appears I've messed up the formatting. "
-                                f"However, I have (pls) fixed it now (thx). To celebrate here is a random quote "
-                                f"I've scraped off the internet:\n \n"
-                                f"{chosen_quote}\nFrom your boy,\nEitan"
+        connection.sendmail(from_addr=MY_EMAIL,
+                            to_addrs=bday_person["email"],
+                            msg=f"Subject: Happy Birthday \n\n {contents}"
                             )
+
+
 
