@@ -43,3 +43,5 @@
 - Day 29: [Building a Password Manager GUI App with Tkinter](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_29)
 - Day 30: [Errors, Exceptions and JSON Data: Improving the Password](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_30)
 - Day 31: [Flash Card App Capstone Project](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_31)
+- Day 32: [Send Email (smtplib) & Manage Dates (datetime)](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_32_/birthday_wisher_start)
+- Day 33: [API Endpoints & API Parameters - ISS Overhead Notifier](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_33)
