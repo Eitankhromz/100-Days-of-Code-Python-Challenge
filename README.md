@@ -46,3 +46,5 @@
 - Day 32: [Send Email (smtplib) & Manage Dates (datetime)](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_32_/birthday_wisher_start)
 - Day 33: [API Endpoints & API Parameters - ISS Overhead Notifier](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_33)
 - Day 34: [API Practice - Creating a GUI Quiz App](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_34)
+- Day 35: [Keys, Authentication & Environment Variables: Send SMS](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_35)
+- Day 36: [Stock Trading News Alert Project](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_36)
