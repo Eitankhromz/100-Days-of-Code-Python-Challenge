@@ -48,3 +48,4 @@
 - Day 34: [API Practice - Creating a GUI Quiz App](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_34)
 - Day 35: [Keys, Authentication & Environment Variables: Send SMS](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_35)
 - Day 36: [Stock Trading News Alert Project](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_36)
+- Day 37: [Habit Tracking Project: API Post Requests & Headers](https://github.com/Eitankhromz/100-Days-of-Code-Python-Challenge/tree/main/Day_37)
